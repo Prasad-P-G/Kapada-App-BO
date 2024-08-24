@@ -34,11 +34,6 @@ const Login = ({navigation}) => {
   // Verify Mobile Number
   const VerifyMobileNumber = async () => {
     try {
-      // Firebase.initialize((context = this));
-      // Firebase.appCheck.installAppCheckProviderFactory(
-      //   DebugAppCheckProviderFactory.getInstance(),
-      // );
-
       const mobile = '+91' + mobileNumber;
       console.log('Mobile Number is - ', mobile);
       const response = await auth().signInWithPhoneNumber(mobile);
