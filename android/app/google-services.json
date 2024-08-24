@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "145445377976",
+    "project_id": "kapada-online",
+    "storage_bucket": "kapada-online.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145445377976:android:e79b6efac36c7909eda14d",
+        "android_client_info": {
+          "package_name": "com.kapada"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145445377976-oees49rc2qe5hiuobio8qurbasrcq0tq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kapada",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "145445377976-7hru5pvej1r6cnigr32u0t2rmh623h8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2Zv8Txwbww0CA6x2fuNsXskFQGqgKym8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145445377976-7hru5pvej1r6cnigr32u0t2rmh623h8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
