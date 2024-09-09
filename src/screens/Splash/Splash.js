@@ -1,5 +1,5 @@
 import {View, Text, StatusBar, Image} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, useSyncExternalStore} from 'react';
 import AppWrapper from '../../components/AppWrapper';
 import {myColors} from '../../utils/Themes/Colors';
 import {responsiveWidth} from 'react-native-responsive-dimensions';
@@ -11,17 +11,23 @@ const Splash = ({navigation}) => {
     //const key = ['kapadaKey'];
     try {
       console.log('About to Remove Key..');
-      if (await AsyncStorage.getItem('kapadaKey')) {
-        await AsyncStorage.Remove('kapadaKey');
+      const uerInfo = await AsyncStorage.getItem('kapadaKey');
+
+      if (uerInfo) {
+        console.log(JSON.parse(uerInfo));
+        await AsyncStorage.removeItem('kapadaKey');
+        console.log('key Removed..');
+        navigation.replace('Login');
+      } else {
+        console.log('User not logged IN');
+        navigation.replace('Login');
       }
     } catch (e) {
       // remove error
     }
-    console.log('key Removed..');
   };
 
   useEffect(() => {
-    removeKey();
     setTimeout(() => {
       AsyncStorage.getItem('kapadaKey')
         .then(result => {
@@ -35,6 +41,7 @@ const Splash = ({navigation}) => {
           console.log(error);
         });
     }, 2000);
+    //removeKey();
   }, []);
 
   return (

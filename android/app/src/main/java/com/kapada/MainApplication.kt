@@ -1,4 +1,4 @@
-package com.kapada
+package com.kapadaApp
 
 import android.app.Application
 import com.facebook.react.PackageList
