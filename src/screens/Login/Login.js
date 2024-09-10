@@ -112,6 +112,7 @@ const Login = ({navigation}) => {
   // Verify Mobile Number
   const VerifyMobileNumber = async () => {
     try {
+<<<<<<< HEAD
       Toast.show({
         type: 'info',
         text1: 'Mobile Number Verification',
@@ -120,6 +121,8 @@ const Login = ({navigation}) => {
         visibilityTime: 8000,
       });
 
+=======
+>>>>>>> 92b995963f31d6fee35abb3d7a110995f4aca0dd
       const mobile = '+91' + mobileNumber;
       console.log('Mobile Number is - ', mobile);
       const response = await auth().signInWithPhoneNumber(mobile);
